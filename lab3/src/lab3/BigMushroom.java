@@ -2,14 +2,12 @@ package lab3;
 
 import javafx.scene.paint.Color;
 import javafx.scene.paint.Paint;
-import javafx.scene.shape.Circle;
 import javafx.scene.shape.Ellipse;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.StrokeType;
 
 public class BigMushroom {
     static Paint capColorPrimary = Color.rgb(185, 13, 11);
-    static Paint capColorSecondary = Color.rgb(247, 125, 120);
     static Paint stipeColor = Color.rgb(245, 247, 196);
 
     static public Polygon getLowerPartOfStipe() {
