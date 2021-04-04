@@ -87,7 +87,6 @@ public class Main extends Application {
         animations.play();
         // End of animation
 
-
         primaryStage.setTitle("Mushrooms");
         primaryStage.setScene(scene);
         primaryStage.show();
