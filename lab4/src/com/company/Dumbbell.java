@@ -1,11 +1,9 @@
 package com.company;
 
 import com.sun.j3d.utils.geometry.*;
-import com.sun.j3d.utils.image.TextureLoader;
 
 import javax.media.j3d.*;
 import javax.vecmath.*;
-import java.awt.*;
 
 public class Dumbbell {
     private final static int flags = Primitive.GENERATE_NORMALS + Primitive.GENERATE_TEXTURE_COORDS;
