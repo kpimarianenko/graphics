@@ -50,7 +50,7 @@ public class Main extends Applet implements ActionListener {
 
         tg.setCapability(TransformGroup.ALLOW_TRANSFORM_WRITE);
         bg.addChild(tg);
-        createDumbbells(1.2, 0.6);
+        createDumbbells(3, 1.2, 0.3);
 
         Color3f lightColor = new Color3f(new Color(64, 64, 64));
         BoundingSphere ib = new BoundingSphere(new Point3d(0, 0, 0), 100);
@@ -72,10 +72,14 @@ public class Main extends Applet implements ActionListener {
         return bg;
     }
 
-    private void createDumbbells(double size, double distance) {
-        float x = (float)(size * distance / 2);
-        createDumbbell(size, new Vector3f(x, 0, 0));
-        createDumbbell(size, new Vector3f(-x, 0, 0));
+    private void createDumbbells(int quantity, double size, double distance) {
+        double period = 2 * Math.PI / quantity;
+
+        for (int i = 0; i < quantity; i++) {
+            float x = (float)(distance * Math.cos(i * period));
+            float z = (float)(distance * Math.sin(i * period));
+            createDumbbell(size, new Vector3f(x, 0, z));
+        }
     }
 
     private void createDumbbell(double size, Vector3f initialVector) {
